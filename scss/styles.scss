@@ -1,0 +1,199 @@
+body{
+}
+
+h1{
+  text-align: center;
+}
+
+ul{
+  background-color: yellowgreen;
+  margin: auto;
+}
+
+li{
+  border: 1px solid red;
+  background-color: pink;
+}
+
+li:hover{
+  border: 1px solid purple;
+  background-color: lavender;
+}
+
+// Debugging 1
+// Chrome Inspector Demo
+
+.bad-block{
+  width: 500px;
+  margin: auto;
+  padding: 40px 0 20px 50px;
+}
+
+.bad-block h1{
+  padding: 20px 0 0 10px;
+}
+
+// Debugging 2: Without Flexbox
+// How would you make this a 2 column grid (without using flexbox)?
+// Both columns are full-height.
+
+.outer-grid{
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: pink;
+}
+
+.inner-left{
+  width: 30%;
+  display: inline-block; // Keep this
+  border: 10px solid green;
+  background-color: yellowgreen;
+}
+
+.inner-right{
+  width: 70%;
+  display: inline-block;
+  border: 10px solid orange;
+  background-color: yellow;
+}
+
+// Grid1 Demo
+// Fix this.
+// Don't use negative margins.
+
+ul.pixels{
+  width: 400px;
+  height: 400px;
+  padding:0;
+}
+
+ul.pixels li{
+  height: 40px;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  list-style-type: none;
+  
+  // Temporary (Comment out & implement the real fix)
+  display: inline-block;
+  width: 40px;
+}
+
+
+// Grid2 Demo
+// Do it Again!
+
+ul.responsive-pixels{
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+
+ul.responsive-pixels li{
+  height: 70px;
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  box-sizing:border-box;
+
+  // Temporary (Comment out & implement the real fix)
+  display: inline-block;
+  width: 70px;
+}
+
+// Grid3 Demo
+// Fix so that each cell stretch so that there are always
+// 10 per row, and the remainder are on the bottom row,
+// clumped to the left.
+
+ul.responsive-pixels-2{
+  width: 100%;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+ul.responsive-pixels-2 li{
+  height: 70px;
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  box-sizing:border-box;
+
+  // Fix This!
+  flex: 0 0 70px;
+}
+
+// Grid4 Demo
+
+.flexbox-outer-grid{
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: pink;
+}
+
+.flexbox-inner-left{
+  border: 10px solid green;
+  background-color: yellowgreen;
+  box-sizing: border-box;
+  
+  // Temporary
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.flexbox-inner-right{
+  border: 10px solid orange;
+  background-color: yellow;
+  box-sizing: border-box;
+  
+  // Temporary  
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  vertical-align: top;
+}
+
+// Grid5 Demo
+// Change properties to fix this grid.
+// Don't use height property or negative margins.
+
+ul.odd-pixels{
+  width: 600px;
+  padding:0;
+}
+
+ul.odd-pixels li{
+  padding: 10px;
+  margin:0;
+  box-sizing:border-box;
+  
+  // Temporary
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3333%;
+}
+
+// Grid6 Demo
+// Vertically and Horizontally center the h1
+
+.centered{
+  background-color: powderblue;
+  width: 100%;
+  padding:0;
+  margin:0;
+  height: 500px;
+}
+
+.centered h1{
+  background-color: orange;
+  padding:0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin:auto;
+}
